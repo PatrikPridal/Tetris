@@ -77,5 +77,34 @@
                 CurrentBlock.Move(0, -1);
             }
         }
+
+        private bool IsGameOver()
+        {
+            return !(GameGrid.IsRowEmpty(0) && GameGrid.IsRowEmpty(1));
+        }
+
+        private void PlaceBlock()
+        {
+            foreach (Position p in CurrentBlock.TilePositions())
+            {
+                GameGrid[p.Row, p.Column] = CurrentBlock.Id;
+            }
+
+            GameGrid.ClearFullRows();
+
+            if (IsGameOver())
+            {
+                GameOver = true;
+            }
+            else
+            {
+                CurrentBlock = BlockQueue.GetAndUpdate();
+            }
+        }
+
+        public void MoveBlockDown()
+        {
+
+        }
     }
 }
