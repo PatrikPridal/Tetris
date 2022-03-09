@@ -38,6 +38,16 @@
             return true;
         }
 
+        public void RotateBlockCW()
+        {
+            CurrentBlock.RotateCW();
+
+            if (!BlockFits())
+            {
+                CurrentBlock.RotateCW();
+            }
+        }
+
         
     }
 }
