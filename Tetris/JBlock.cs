@@ -1,6 +1,6 @@
 ﻿namespace Tetris
 {
-    internal class JBlock : Block
+    public class JBlock : Block
     {
         private readonly Position[][] tiles = new Position[][]
         {

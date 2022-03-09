@@ -2,7 +2,7 @@
 
 namespace Tetris
 {
-    internal class BlockQueue
+    public class BlockQueue
     {
         private readonly Block[] blocks = new Block[]
         {
