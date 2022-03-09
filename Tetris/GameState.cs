@@ -44,10 +44,20 @@
 
             if (!BlockFits())
             {
+                CurrentBlock.RotateCCW();
+            }
+        }
+
+        public void RotateBlockCCW()
+        {
+            CurrentBlock.RotateCCW();
+
+            if (!BlockFits())
+            {
                 CurrentBlock.RotateCW();
             }
         }
 
-        
+
     }
 }
